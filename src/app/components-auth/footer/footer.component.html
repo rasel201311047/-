@@ -1,19 +1,34 @@
 <!-- footer.component.html -->
-<div class="bg-bgdiscount">
-    <footer class="relative w-full">
-        <div class="mx-auto w-full max-w-7xl px-8">
-          <div class="mx-auto grid w-full grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
-            <div *ngFor="let section of sitemap">
-              <div class="mb-4 font-bold uppercase opacity-50">
-                {{ section.title }}
-              </div>
-              <ul class="space-y-1">
-                <li *ngFor="let link of section.links">
-                  <a href="#" class="inline-block py-1 pr-2 transition-transform hover:scale-105">
-                    {{ link }}
-                  </a>
-                </li>
-              </ul>
+<div class="bg-footerColor">
+
+    <div class="flex pt-12 justify-around md:flex-row flex-col md:items-start items-center">
+        <div>
+            <img class="w-60" src="../../../assets/images/logo.png" alt="">
+        </div>
+        <div class="pt-4">
+            <h2>Contract</h2>
+            <h4>(+880) 1303679402</h4>
+            <h4>raselislam435&#64;hotmail.com</h4>
+        </div>
+    </div>
+    <footer class="w-full">
+        <div class="mx-auto w-full max-w-7xl px-8 h-0.5 mt-8 bg-black"></div>
+        <div class="mx-auto w-full max-w-7xl text-center   px-8">
+          <div class="mx-auto grid  w-full grid-cols-1  gap-8 pt-5 pb-12 md:grid-cols-2 lg:grid-cols-3">
+            <div *ngFor="let section of sitemap" class="">
+                <div class="">
+                    <div class="mb-4 font-bold uppercase  text-black">
+                        {{ section.title }}
+                      </div>
+                      <ul class="space-y-1">
+                        <li *ngFor="let link of section.links">
+                          <a href="#" class="inline-block py-1 pr-2 transition-transform hover:scale-105">
+                            {{ link }}
+                          </a>
+                        </li>
+                      </ul>
+                </div>
+
             </div>
           </div>
         </div>

@@ -9,12 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  currentYear = new Date().getFullYear();
-
   sitemap = [
-    { title: "Company", links: ["About Us", "Careers", "Our Team", "Projects"] },
-    { title: "Help Center", links: ["Discord", "Twitter", "GitHub", "Contact Us"] },
-    { title: "Resources", links: ["Blog", "Newsletter", "Free Products", "Affiliate Program"] },
-    { title: "Products", links: ["Templates", "UI Kits", "Icons", "Mockups"] }
+    { title: "Top categories", links: ["Fresh Fruits",  "Organic wine", "Organic Juice","Dairy & chesse","Fresh meat"] },
+    { title: "Privacy & terms", links: ["About", "Free delevery", "Dhaka", "Contact Us"] },
+    { title: "Resources", links: ["Blog", "Privacy policy", "Return policy", "Terms & conditions"] },
+   
   ];
 }
