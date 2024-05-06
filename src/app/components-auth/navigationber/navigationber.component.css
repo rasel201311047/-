@@ -1,0 +1,8 @@
+/* menu.component.css */
+.nav-active {
+    @apply translate-x-0;
+}
+
+.search-active {
+    @apply translate-y-0;
+}

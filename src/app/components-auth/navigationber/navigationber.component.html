@@ -1,0 +1,102 @@
+<!-- menu.component.html -->
+<div class=" flex items-center justify-between px-4">
+    <div class="flex gap-3 ">
+        <div class="menu">
+            <button class="iconbnt" (click)="navSlide()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+        <div class="md:hidden">
+            <button class="iconbnt" (click)="searchfnt()">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div>
+        <img class="md:w-72 w-52" src="../../../assets/images/logo.png" alt="">
+    </div>
+    <div class="flex items-center gap-3">
+        <div class="hidden md:block">
+            <button class="iconbnt" (click)="searchfnt()">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+        <div>
+            <a href="">
+                <mat-icon>person</mat-icon>
+            </a>
+        </div>
+
+        <div>
+            <a href="">
+                <mat-icon>favorite</mat-icon>
+            </a>
+        </div>
+
+        <div>
+            <button class="iconbnt " (click)="navcard()">
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+        </div>
+
+    </div>
+
+
+</div>
+<div class=" fixed top-0 left-0 h-screen pt-12 bg-bgColor1 flex flex-col items-center w-full md:w-1/4 -translate-x-full transition-transform duration-500 overflow-scroll z-50 " [class.nav-active]="navActive">
+    <!-- Add navigation links here -->
+    <div class="absolute top-2 right-4">
+        <button class="iconbnt" (click)="navSlide()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <a class="text-black py-2">Home</a>
+    <a class="text-black py-2">Blog</a>
+    <a class="text-black py-2">My Card</a>
+</div>
+
+<div class=" fixed top-0 right-0 h-screen pt-12 bg-bgColor1 flex flex-col items-center w-full md:w-1/4 translate-x-full transition-transform duration-500 overflow-x-scroll whitespace-nowrap z-50 " [class.nav-active]="cardActive">
+    <!-- Add navigation links here -->
+    <div class="absolute top-2 right-4" (click)="navcard()">
+        <button class="iconbnt" >
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <div class="flex items-center justify-around px-5">
+        <div class="basis-4/12">
+            <img class="w-5/12" src="../../../assets/images/item2/item (1).png" alt="">
+        </div>
+        <div class="basis-4/12">
+            <p>Shrimp - jumbo (5 kg)</p>
+        </div>
+        <div class="flex-2">
+            <mat-icon>delete</mat-icon>
+        </div>
+    </div>
+
+    <div class="flex items-center justify-around px-5">
+        <div class="basis-4/12">
+            <img class="w-5/12" src="../../../assets/images/item2/item (1).png" alt="">
+        </div>
+        <div class="basis-4/12">
+            <p>Shrimp - jumbo (5 kg)</p>
+        </div>
+        <div class="flex-2">
+            <mat-icon>delete</mat-icon>
+        </div>
+    </div>
+</div>
+
+<div class="fixed bg-bgColor1 inset-x-0 top-0 h-20 w-full pt-2 pb-2  flex flex-col items-center -translate-y-full transition-transform duration-500 ease-in z-50"  [class.search-active]="searchActive">
+    <div class="absolute inset-y-1/4 right-4 " (click)="searchfnt()">
+        <button class="iconbnt" >
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <div>
+        <input type="text" placeholder="search" class="py-2 px-3">
+        <button class="py-2 px-3 bg-bntcolor border-2 border-white text-white hover:border-bntcolor hover:bg-white hover:text-bntcolor">Search</button>
+    </div>
+</div>
+
+
