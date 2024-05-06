@@ -14,7 +14,7 @@ export class CardItemsComponent {
   stars: number[] = [];
 
   ngOnInit(): void {
-    this.stars = Array(5).fill(0); // Assuming max rating is 5
+    this.stars = Array(5).fill(0); 
   }
 
   price: number = 100;

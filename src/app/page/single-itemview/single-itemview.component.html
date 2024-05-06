@@ -1,0 +1,84 @@
+<div>
+    <app-navigationber></app-navigationber>
+    <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row w-full mt-12 mb-12">
+            <div class="singleview flex-1 relative">
+                <!-- Slideshow container -->
+                <div class="w-full h-96">
+                    <!-- Full-width images with number text -->
+                    <div class="w-full h-full hidden">
+                        <img src="../../../assets/images/item2/item (5).png" class="w-full h-full">
+                    </div>
+                    <div class="w-full h-full ">
+                        <img src="../../../assets/images/item2/item (6).png" class="w-full h-full">
+                    </div>
+                    <div class="w-full h-full hidden">
+                        <img src="../../../assets/images/item2/item (7).png" class="w-full h-full">
+                    </div>
+                    <div class="w-full h-full hidden">
+                        <img src="../../../assets/images/item2/item (9).png" class="w-full h-full">
+                    </div>
+                </div>
+                
+                <!-- Thumbnail images as row -->
+                <div class="flex gap-2 justify-center mt-4">
+                    <div class="w-1/6 border-2 border-green-300">
+                        <img src="../../../assets/images/item2/item (1).png" class="w-full cursor-pointer opacity-60 hover:opacity-100" onclick="currentSlide(1)">
+                    </div>
+                    <div class="w-1/6 border-2 border-green-300">
+                        <img src="../../../assets/images/item2/item (6).png" class="w-full cursor-pointer opacity-60 hover:opacity-100" onclick="currentSlide(2)">
+                    </div>
+                    <div class="w-1/6 border-2 border-green-300">
+                        <img src="../../../assets/images/item2/item (7).png" class="w-full cursor-pointer opacity-60 hover:opacity-100" onclick="currentSlide(3)">
+                    </div>
+                    <div class="w-1/6 border-2 border-green-300">
+                        <img src="../../../assets/images/item2/item (9).png" class="w-full cursor-pointer opacity-60 hover:opacity-100" onclick="currentSlide(4)">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flex-1 p-8">
+                <h3 class="text-3xl">Shrimp - jumbo (5 lb)</h3>
+                <div class="h-px bg-gray-700 my-4"></div>
+                <div class="text-lg">
+                    <span *ngFor="let star of stars; let i = index">
+                        <mat-icon [color]="i < rating ? 'warn' : 'none'">star</mat-icon>
+                    </span>
+                </div>
+                <div class="mb-4">
+                    <span class="font-bold text-lg">Availability:</span>
+                    <span>71 in stock</span>
+                </div>
+                <h3 class="font-bold text-3xl mb-4">TK  1,000</h3>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <div class="mb-4">
+                    <span class="font-bold text-lg">Size</span>
+                    <span>1 kg</span>
+                </div>
+                <div class="flex gap-2">
+                    <div class="bg-yellow-400 rounded-full px-4 py-2">
+                        <a href="" class="no-underline text-green-800 font-bold text-lg">Add to Cart</a>
+                    </div>
+                    <div class="bg-green-800 rounded-full px-4 py-2">
+                        <a href="#" class="no-underline text-white font-bold text-lg">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="comment">
+            <div class="border-2 border-gray-700 p-4 mb-12">
+                <h3>Md Rasel Islam</h3>
+                <div class="text-lg">
+                    <span *ngFor="let star of stars; let i = index">
+                        <mat-icon [color]="i < rating ? 'warn' : 'none'">star</mat-icon>
+                    </span>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+        </div>
+    </div>
+
+
+    <app-footer></app-footer>
+</div>
