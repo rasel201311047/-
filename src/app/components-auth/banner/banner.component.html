@@ -1,17 +1,21 @@
 <section class="carouselSection">
     <div class="carousel">
-      <div *ngFor="let item of carouselItems; let i = index" class="carousel-item" [class.active]="i === activeSlideIndex">
-        <div class="bn1">
-          <img [src]="item.imgSrc" alt="">
-          <div [ngClass]="{'bnText': i !== 2, 'bnText1': i === 2}">
-            <h1>{{ item.offer }}</h1>
-            <div class="bnBnt">
-              <button (click)="goToShop()">Shop Now</button>
+        <div class="carousel-item">
+            <div class="bn1 relative">
+                <img class="w-full" src="../../../assets/images/banner/ban2.png" alt="">
+                <div class="bnText absolute top-1/2  left-1/4">
+                    <h1 class="text-3xl">রামাদান অফার</h1>
+                    <div class="bnBnt">
+                        <a href="" class="bg-bntcolor text-bgColor1 rounded-full px-3 py-1 text-sm font-semibold">
+                            Shop Now
+                            </a>
+                    </div>
+
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+
+
+
     </div>
-  </section>
-  
-  
+</section>

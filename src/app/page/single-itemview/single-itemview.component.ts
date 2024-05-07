@@ -5,10 +5,14 @@ import { CommonModule } from '@angular/common';
 import { NavberComponent } from '../../components-auth/navber/navber.component';
 import { FooterComponent } from '../../components-auth/footer/footer.component';
 import { NavigationberComponent } from '../../components-auth/navigationber/navigationber.component';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-single-itemview',
   standalone: true,
-  imports: [CommonModule,MatIcon,NavigationberComponent,FooterComponent],
+  imports: [CommonModule,MatIcon,NavigationberComponent,
+    FooterComponent,
+    RouterLink
+  ],
   templateUrl: './single-itemview.component.html',
   styleUrl: './single-itemview.component.css'
 })

@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-card-items',
   standalone: true,
-  imports: [MatIcon,CommonModule],
+  imports: [MatIcon,CommonModule,RouterLink],
   templateUrl: './card-items.component.html',
   styleUrl: './card-items.component.css'
 })

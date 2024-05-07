@@ -1,25 +1,33 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FooterComponent } from '../../components-auth/footer/footer.component';
+import { NavigationberComponent } from '../../components-auth/navigationber/navigationber.component';
 
 @Component({
   selector: 'app-signin',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FooterComponent,NavigationberComponent],
   templateUrl: './signin.component.html',
   styleUrl: './signin.component.css'
 })
 export class SigninComponent {
-  signUpMode = false;
-
-  toggleMode(): void {
-    this.signUpMode = !this.signUpMode;
+  isSignUpMode = false;  
+  isSignUpMode2 = false; 
+  toggleSignUpMode() {
+    this.isSignUpMode = true;
+    this.isSignUpMode2 = false; 
   }
 
-  signIn(): void {
-    console.log('Sign-in logic here');
+  toggleSignInMode() {
+    this.isSignUpMode = false;
   }
 
-  signUp(): void {
-    console.log('Sign-up logic here');
+  toggleSignUpMode2() {
+    this.isSignUpMode2 = true;
+    this.isSignUpMode = false; 
+  }
+
+  toggleSignInMode2() {
+    this.isSignUpMode2 = false;
   }
 }

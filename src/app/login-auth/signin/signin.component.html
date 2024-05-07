@@ -1,38 +1,63 @@
-<!-- auth-form.component.html -->
-<section class="flex items-center justify-center min-h-screen">
-    <div class="relative w-11/12 md:w-3/4 lg:w-2/3 bg-gray-200 rounded-lg shadow-xl overflow-hidden" [class.sign-up-mode]="signUpMode">
-      <div class="absolute inset-0 flex items-center justify-around z-10">
-        <!-- Sign-in Form -->
-        <form *ngIf="!signUpMode" class="flex flex-col items-center justify-center w-full max-w-xs p-2 transition-opacity duration-500 delay-1000" (ngSubmit)="signIn()">
-          <h2 class="text-4xl text-blue-500 mb-2">Sign in</h2>
-          <div class="flex items-center p-2">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" class="flex-1 bg-transparent outline-none">
-          </div>
-          <div class="flex items-center p-2">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" class="flex-1 bg-transparent outline-none">
-          </div>
-          <button type="submit" class="w-36 h-12 mt-4">Login</button>
-        </form>
-        <!-- Sign-up Form -->
-        <form *ngIf="signUpMode" class="flex flex-col items-center justify-center w-full max-w-xs p-2 transition-opacity duration-500 delay-1000" (ngSubmit)="signUp()">
-          <h2 class="text-4xl text-blue-500 mb-2">Sign up</h2>
-          <div class="flex items-center p-2">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" class="flex-1 bg-transparent outline-none">
-          </div>
-          <div class="flex items-center p-2">
-            <i class="fas fa-envelope"></i>
-            <input type="text" placeholder="Email" class="flex-1 bg-transparent outline-none">
-          </div>
-          <div class="flex items-center p-2">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" class="flex-1 bg-transparent outline-none">
-          </div>
-          <button type="submit" class="w-36 h-12 mt-4">Sign up</button>
-        </form>
-      </div>
+<div>
+<app-navigationber></app-navigationber>
+
+  <section class="loginsec">
+
+    <div class="fromcontainer" [ngClass]="{'sign-up-mode': isSignUpMode, 'sign-up-mode2': isSignUpMode2}">
+        <div class="signin-signup">
+            <form action="" class="sign-in-form">
+                <h2 class="title">Sign in</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <input type="submit" value="Login" class="btn">
+                <p class="account-text">Don't have an account? <button type="button" (click)="toggleSignUpMode()">Sign up</button></p>
+            </form>
+            <form action="" class="sign-up-form">
+                <h2 class="title">Sign up</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <input type="submit" value="Sign up" class="btn">
+                <p class="account-text">Already have an account? <button type="button" (click)="toggleSignInMode2()">Sign in</button></p>
+            </form>
+        </div>
+        <div class="panels-fromcontainer">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Member of Brand?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium dolor, eos incidunt minima iure?</p>
+                    <button class="btn" id="sign-in-btn">Sign in</button>
+                </div>
+                <img src="signin.svg" alt="" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>New to Brand?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium dolor, eos incidunt minima iure?</p>
+                    <button class="btn" id="sign-up-btn">Sign up</button>
+                </div>
+                <img src="signin.svg" alt="" class="image">
+                
+            </div>
+        </div>
     </div>
-  </section>
   
+  </section>
+
+  <app-footer></app-footer>
+</div>

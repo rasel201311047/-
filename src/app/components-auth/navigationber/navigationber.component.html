@@ -3,7 +3,7 @@
     <div class="flex gap-3 ">
         <div class="menu">
             <button class="iconbnt" (click)="navSlide()">
-                <mat-icon>menu</mat-icon>
+                <img class="w-5" src="../../../assets/icon/menu.png" alt="">
             </button>
         </div>
         <div class="md:hidden">
@@ -22,7 +22,7 @@
             </button>
         </div>
         <div>
-            <a href="">
+            <a routerLink="/signin">
                 <mat-icon>person</mat-icon>
             </a>
         </div>
@@ -50,9 +50,9 @@
             <mat-icon>close</mat-icon>
         </button>
     </div>
-    <a class="text-black py-2">Home</a>
-    <a class="text-black py-2">Blog</a>
-    <a class="text-black py-2">My Card</a>
+    <a routerLink="/" class="text-black py-2">Home</a>
+    <a routerLink="/about" class="text-black py-2">About</a>
+    <a routerLink="/contract" class="text-black py-2">Contruct</a>
 </div>
 
 <div class=" fixed top-0 right-0 h-screen pt-12 bg-bgColor1 flex flex-col items-center w-full md:w-1/4 translate-x-full transition-transform duration-500 overflow-x-scroll whitespace-nowrap z-50 " [class.nav-active]="cardActive">

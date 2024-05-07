@@ -1,5 +1,5 @@
-<div>
-    <div class="group max-w-sm rounded overflow-hidden shadow-lg mx-auto mt-2">
+
+    <div class="group max-w-sm  rounded overflow-hidden shadow-lg mx-auto mt-2">
         <div class="relative">
             <img class="w-4/6 mx-auto" src="../../../assets/images/item2/item (1).png" alt="Sunset in the mountains">
             <div *ngIf="discount > 0" class="absolute top-2 right-3 font-semibold bg-bgdiscount py-1 px-3 rounded-md text-white">
@@ -31,11 +31,10 @@
                 </p>
                 <p><span class="text-sm font-bold text-gray-900">Tk {{price}}</span> <span
                         class="text-sm text-gray-400 line-through ms-2"> Tk {{preprice}}</span></p>
-                <a href="" class="bg-bntcolor rounded-full px-3 py-1 text-sm font-semibold">
+                <a routerLink="/item" class="bg-bntcolor text-bgColor1 rounded-full px-3 py-1 text-sm font-semibold">
                 Shop Now
                 </a>
             </div>
 
         </div>
     </div>
-</div>

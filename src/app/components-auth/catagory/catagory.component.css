@@ -1,0 +1,19 @@
+.overlay{
+    transform: translate(-50%,-50%);
+  }
+  
+  .overlay{
+    visibility: hidden;
+  }
+  .catElem:hover .overlay{
+    visibility: visible;
+    animation:fade 0.5s;
+  }
+  @keyframes fade{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }

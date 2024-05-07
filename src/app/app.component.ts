@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './page/home/home.component';
+import { HomemainComponent } from './homemain/homemain.component';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { HomeComponent } from './page/home/home.component';
   imports: [
     RouterOutlet,
     HomeComponent,
-    MatIconModule
+    MatIconModule,
+    HomemainComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
